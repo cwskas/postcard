@@ -59,7 +59,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyT-xa-046">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Recipient Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oyT-xa-046">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -67,12 +67,12 @@
                                     <rect key="frame" x="26" y="309" width="325" height="30"/>
                                 </variation>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGV-PR-AFF">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" borderStyle="line" placeholder="Enter Message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jGV-PR-AFF">
                                 <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <variation key="widthClass=compact" fixedFrame="YES">
-                                    <rect key="frame" x="26" y="366" width="325" height="30"/>
+                                    <rect key="frame" x="26" y="366" width="325" height="202"/>
                                 </variation>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXH-iN-IXY">
@@ -116,6 +116,15 @@
                                     <action selector="sendMailButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Ml-Kb-4yp"/>
                                 </connections>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="adq-bV-BDG">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="28" y="72" width="162" height="31"/>
+                                </variation>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <variation key="default">
@@ -126,6 +135,7 @@
                                 <exclude reference="MU1-i8-w1j"/>
                                 <exclude reference="Fk1-Z9-QAK"/>
                                 <exclude reference="DB5-hg-V4g"/>
+                                <exclude reference="adq-bV-BDG"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -136,6 +146,7 @@
                                 <include reference="MU1-i8-w1j"/>
                                 <include reference="Fk1-Z9-QAK"/>
                                 <include reference="DB5-hg-V4g"/>
+                                <include reference="adq-bV-BDG"/>
                             </mask>
                         </variation>
                     </view>
@@ -144,6 +155,7 @@
                         <outlet property="enterNameTextField" destination="oyT-xa-046" id="y0G-nb-m2E"/>
                         <outlet property="mailButton" destination="DB5-hg-V4g" id="1Mk-4X-Bmp"/>
                         <outlet property="messageLabel" destination="hXH-iN-IXY" id="Y31-MC-17N"/>
+                        <outlet property="senderName" destination="adq-bV-BDG" id="x4T-tZ-mWQ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
